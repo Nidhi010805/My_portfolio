@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nidhi Devi | SDE &amp; Full-Stack Developer</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-high": "#2b292f",
+                    "surface": "#141218",
+                    "primary-container": "#6750a4",
+                    "inverse-surface": "#e6e0e9",
+                    "inverse-on-surface": "#322f35",
+                    "on-tertiary-fixed": "#241a00",
+                    "tertiary-container": "#c9a74d",
+                    "secondary-container": "#4d4465",
+                    "surface-variant": "#36343a",
+                    "on-secondary": "#342b4b",
+                    "outline": "#948e9c",
+                    "background": "#141218",
+                    "secondary": "#cdc0e9",
+                    "surface-bright": "#3b383e",
+                    "on-primary": "#381e72",
+                    "on-secondary-fixed": "#1f1635",
+                    "secondary-fixed": "#e9ddff",
+                    "on-surface": "#e6e0e9",
+                    "surface-container": "#211f24",
+                    "on-error": "#690005",
+                    "on-tertiary": "#3e2e00",
+                    "secondary-fixed-dim": "#cdc0e9",
+                    "on-primary-fixed": "#22005d",
+                    "primary-fixed-dim": "#cfbcff",
+                    "surface-tint": "#cfbcff",
+                    "tertiary-fixed": "#ffdf93",
+                    "on-background": "#e6e0e9",
+                    "on-secondary-fixed-variant": "#4b4263",
+                    "error": "#ffb4ab",
+                    "primary-fixed": "#e9ddff",
+                    "surface-container-highest": "#36343a",
+                    "on-primary-fixed-variant": "#4f378a",
+                    "surface-container-low": "#1d1b20",
+                    "surface-container-lowest": "#0f0d13",
+                    "on-secondary-container": "#bfb2da",
+                    "on-primary-container": "#e0d2ff",
+                    "error-container": "#93000a",
+                    "on-error-container": "#ffdad6",
+                    "tertiary-fixed-dim": "#e7c365",
+                    "on-surface-variant": "#cbc4d2",
+                    "inverse-primary": "#6750a4",
+                    "primary": "#cfbcff",
+                    "tertiary": "#e7c365",
+                    "on-tertiary-container": "#503d00",
+                    "outline-variant": "#494551",
+                    "surface-dim": "#141218",
+                    "on-tertiary-fixed-variant": "#594400"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "16px",
+                    "unit": "8px",
+                    "margin-desktop": "48px",
+                    "stack-md": "24px",
+                    "container-max": "1200px",
+                    "gutter": "24px",
+                    "stack-sm": "8px",
+                    "stack-lg": "64px"
+            },
+            "fontFamily": {
+                    "headline-sm": ["Geist"],
+                    "body-lg": ["Geist"],
+                    "display-lg": ["Geist"],
+                    "headline-md": ["Geist"],
+                    "display-lg-mobile": ["Geist"],
+                    "label-mono": ["JetBrains Mono"],
+                    "body-md": ["Geist"]
+            },
+            "fontSize": {
+                    "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "label-mono": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #0a0f1e;
+            color: #e6e0e9;
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .mesh-gradient {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: radial-gradient(circle at 20% 30%, rgba(103, 80, 164, 0.15) 0%, transparent 40%),
+                        radial-gradient(circle at 80% 70%, rgba(231, 195, 101, 0.1) 0%, transparent 40%),
+                        radial-gradient(circle at 50% 50%, rgba(205, 192, 233, 0.05) 0%, transparent 60%);
+        }
+        .animate-pulse-slow {
+            animation: pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md selection:bg-primary/30">
+<div class="mesh-gradient animate-pulse-slow"></div>
+<!-- Navigation -->
+<!-- Navbar -->
+<nav class="fixed top-5 left-1/2 -translate-x-1/2 z-50
+            w-[97%]
+            bg-[#0b1220]/80
+            backdrop-blur-2xl
+            border border-[#1f2a44]
+            rounded-full
+            shadow-[0_0_30px_rgba(59,130,246,0.12)]">
+
+    <div class="px-8 py-4">
+
+        <div class="hidden md:flex items-center justify-center gap-5">
+
+            <a href="#home"
+               class="px-6 py-2.5 rounded-full bg-primary text-black font-medium transition duration-300">
+                Home
+            </a>
+
+            <a href="#about"
+               class="px-6 py-2.5 rounded-full border border-white/10 hover:bg-white/10 transition">
+                About
+            </a>
+
+            <a href="#skills"
+               class="px-6 py-2.5 rounded-full border border-white/10 hover:bg-white/10 transition">
+                Skills
+            </a>
+
+            <a href="#experience"
+               class="px-6 py-2.5 rounded-full border border-white/10 hover:bg-white/10 transition">
+                Experience
+            </a>
+
+            <a href="#projects"
+               class="px-6 py-2.5 rounded-full border border-white/10 hover:bg-white/10 transition">
+                Projects
+            </a>
+
+            <a href="#achievements"
+               class="px-6 py-2.5 rounded-full border border-white/10 hover:bg-white/10 transition">
+                Achievements
+            </a>
+
+            <a href="#contact"
+               class="px-6 py-2.5 rounded-full border border-primary
+                      hover:bg-primary hover:text-black transition duration-300">
+                Contact
+            </a>
+
+        </div>
+
+    </div>
+</nav>
+<main class="pt-32 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<!-- Hero Section -->
+<section id="home"  class="flex flex-col md:flex-row items-center justify-between gap-stack-lg mb-stack-lg">
+<div class="flex-1 space-y-stack-md text-center md:text-left">
+<div class="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 text-primary px-4 py-1.5 rounded-full font-label-mono text-label-mono mb-4">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+                    AVAILABLE FOR OPPORTUNITIES
+                </div>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface leading-[1.1]">
+                    Software Development Engineer &amp; <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-tertiary">Full-Stack Developer</span>
+</h1>
+<p class="text-on-surface-variant font-body-lg text-body-lg max-w-2xl mx-auto md:mx-0">
+                    Crafting scalable architectures and pixel-perfect interfaces. I bridge the gap between complex backend logic and intuitive user experiences.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 pt-4 justify-center md:justify-start">
+<button class="bg-gradient-to-r from-orange-500 to-pink-500 text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-2 group hover:shadow-[0_0_20px_rgba(236,72,153,0.4)] transition-all active:scale-95">
+                        Hire Me
+                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_right_alt</span>
+</button>
+<button class="glass-card px-8 py-4 rounded-xl font-bold text-lg text-on-surface hover:bg-white/10 transition-all">
+                        View Projects
+                    </button>
+</div>
+</div>
+<div class="flex-1 relative">
+<div class="absolute -inset-4 bg-gradient-to-tr from-primary to-tertiary opacity-20 blur-3xl rounded-full"></div>
+<div class="relative w-64 h-64 md:w-96 md:h-96 mx-auto">
+<div class="absolute inset-0 rounded-3xl border-2 border-white/10 rotate-3"></div>
+<div class="absolute inset-0 rounded-3xl border-2 border-primary/20 -rotate-3"></div>
+<img
+  class="w-full h-full object-cover rounded-3xl shadow-2xl relative z-10 glass-card"
+  src="./images/profile.png"
+  alt="Nidhi Devi"
+/>
+</div>
+</div>
+</section>
+
+
+<!-- About Section -->
+<section id="about" class="mb-stack-lg">
+  <div class="flex items-center justify-between mb-stack-md">
+   <h2 class="inline-flex items-center px-6 py-3 rounded-full
+           bg-[#141b31]
+           border border-cyan-400/20
+           shadow-[0_0_25px_rgba(34,211,238,0.1)]
+           no-underline">
+
+<span class="text-2xl md:text-3xl leading-none"
+     style="
+       font-family: 'Shrikhand', serif;
+       color: #FFD166;
+       text-decoration: none;
+       text-shadow: none;
+     ">
+ABOUT ME </span>
+
+</h2>
+    
+    
+  </div>
+
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter">
+
+    <!-- Left -->
+    <div class="glass-card p-8 rounded-3xl">
+      <div class="flex items-center gap-3 mb-6">
+       
+        
+      </div>
+
+      <p class="text-on-surface-variant leading-8 mb-6">
+        I'm <span class="text-primary font-semibold">Nidhi Devi</span>, a
+    Electrical and Electronics Engineering undergraduate at
+        <span class="text-tertiary">BIT Mesra</span>. I am passionate about
+        Full-Stack Development, System Design, and Competitive Programming.
+        I enjoy building scalable applications and solving real-world
+        problems through technology.
+      </p>
+
+      <div class="flex items-center gap-3 text-secondary">
+        <span class="material-symbols-outlined">location_on</span>
+        <span class="font-label-mono text-label-mono">
+          India (IST)
+        </span>
+      </div>
+    </div>
+
+    <!-- Right -->
+    <div class="glass-card p-8 rounded-3xl">
+      <div class="flex items-center gap-3 mb-8">
+        <span class="material-symbols-outlined text-tertiary">
+          school
+        </span>
+        <h3 class="font-headline-sm text-headline-sm text-on-surface">
+          Education
+        </h3>
+      </div>
+
+      <div class="relative border-l border-white/10 pl-8 space-y-10">
+
+        <!-- BIT -->
+        <div class="relative">
+          <div class="absolute -left-[38px] top-1 w-4 h-4 rounded-full bg-primary border-4 border-surface"></div>
+
+          <h4 class="text-on-surface font-semibold text-lg">
+            Birla Institute of Technology, Mesra
+          </h4>
+
+          <p class="text-primary font-label-mono text-sm mt-1">
+            B.Tech in Electrical and Electronics Engineering
+          </p>
+
+          <p class="text-on-surface-variant text-sm mt-2">
+            2023 — 2027
+          </p>
+
+          <p class="text-on-surface-variant text-sm mt-1">
+            Current CGPA : <span class="text-tertiary">9+</span>
+          </p>
+        </div>
+
+        <!-- School -->
+        <div class="relative">
+          <div class="absolute -left-[38px] top-1 w-4 h-4 rounded-full bg-outline-variant border-4 border-surface"></div>
+
+          <h4 class="text-on-surface font-semibold text-lg">
+            Higher Secondary Education
+          </h4>
+
+          <p class="text-on-surface-variant text-sm mt-1">
+            Science Stream (PCM)
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<!-- Technical Arsenal (Bento Grid Style) -->
+<section  id="skills" class="mb-stack-lg">
+<div class="flex items-center justify-between mb-stack-md">
+<h2 class="inline-flex items-center px-6 py-3 rounded-full
+           bg-[#141b31]
+           border border-cyan-400/20
+           shadow-[0_0_25px_rgba(34,211,238,0.1)]
+           no-underline">
+
+<span class="text-2xl md:text-3xl leading-none"
+     style="
+       font-family: 'Shrikhand', serif;
+       color: #FFD166;
+       text-decoration: none;
+       text-shadow: none;
+     ">
+MY TECH STACK </span>
+
+</h2>
+
+
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Languages -->
+<div class="glass-card p-8 rounded-3xl md:col-span-1">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary">terminal</span>
+<h3 class="font-headline-sm text-headline-sm">Languages</h3>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="bg-primary/10 text-primary border border-primary/20 px-3 py-1 rounded-full text-sm font-medium">Java</span>
+<span class="bg-primary/10 text-primary border border-primary/20 px-3 py-1 rounded-full text-sm font-medium">TypeScript</span>
+<span class="bg-primary/10 text-primary border border-primary/20 px-3 py-1 rounded-full text-sm font-medium">Python</span>
+<span class="bg-primary/10 text-primary border border-primary/20 px-3 py-1 rounded-full text-sm font-medium">C++</span>
+<span class="bg-primary/10 text-primary border border-primary/20 px-3 py-1 rounded-full text-sm font-medium">JavaScript</span>
+<span class="bg-primary/10 text-primary border border-primary/20 px-3 py-1 rounded-full text-sm font-medium">SQL</span>
+</div>
+</div>
+<!-- Frameworks & Tools -->
+<div class="glass-card p-8 rounded-3xl md:col-span-2">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-secondary">layers</span>
+<h3 class="font-headline-sm text-headline-sm">Frameworks &amp; Tools</h3>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+<div class="space-y-4">
+<div class="text-secondary font-label-mono text-xs uppercase">Frontend</div>
+<div class="flex flex-wrap gap-2">
+<span class="bg-secondary/10 text-secondary border border-secondary/20 px-3 py-1 rounded-full text-sm font-medium">React.js</span>
+<span class="bg-secondary/10 text-secondary border border-secondary/20 px-3 py-1 rounded-full text-sm font-medium">Next.js</span>
+<span class="bg-secondary/10 text-secondary border border-secondary/20 px-3 py-1 rounded-full text-sm font-medium">Tailwind CSS</span>
+</div>
+</div>
+<div class="space-y-4">
+<div class="text-tertiary font-label-mono text-xs uppercase">Backend</div>
+<div class="flex flex-wrap gap-2">
+<span class="bg-tertiary/10 text-tertiary border border-tertiary/20 px-3 py-1 rounded-full text-sm font-medium">Node.js</span>
+<span class="bg-tertiary/10 text-tertiary border border-tertiary/20 px-3 py-1 rounded-full text-sm font-medium">Spring Boot</span>
+<span class="bg-tertiary/10 text-tertiary border border-tertiary/20 px-3 py-1 rounded-full text-sm font-medium">Express</span>
+</div>
+</div>
+<div class="space-y-4">
+<div class="text-on-surface-variant font-label-mono text-xs uppercase">DevOps/DB</div>
+<div class="flex flex-wrap gap-2">
+<span class="bg-white/5 text-on-surface-variant border border-white/10 px-3 py-1 rounded-full text-sm font-medium">Docker</span>
+<span class="bg-white/5 text-on-surface-variant border border-white/10 px-3 py-1 rounded-full text-sm font-medium">AWS</span>
+<span class="bg-white/5 text-on-surface-variant border border-white/10 px-3 py-1 rounded-full text-sm font-medium">PostgreSQL</span>
+<span class="bg-white/5 text-on-surface-variant border border-white/10 px-3 py-1 rounded-full text-sm font-medium">MongoDB</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Code Snippet / Interactive Terminal Area -->
+<section class="mb-stack-lg">
+<div class="glass-card rounded-3xl overflow-hidden border border-white/10">
+<div class="bg-surface-container-low px-6 py-4 flex items-center justify-between border-b border-white/5">
+<div class="flex gap-2">
+<div class="w-3 h-3 rounded-full bg-[#ff5f56]"></div>
+<div class="w-3 h-3 rounded-full bg-[#ffbd2e]"></div>
+<div class="w-3 h-3 rounded-full bg-[#27c93f]"></div>
+</div>
+<div class="font-label-mono text-label-mono text-on-surface-variant opacity-50">AboutMe.java</div>
+<div class="w-8"></div>
+</div>
+<div class="p-8 font-label-mono text-label-mono text-on-surface-variant bg-surface-container-lowest/50">
+<div class="mb-2"><span class="text-pink-500">public class</span> <span class="text-tertiary">NidhiDevi</span> {</div>
+<div class="ml-6 mb-2"> <span class="text-pink-500">private String</span> role = <span class="text-green-400">"SDE"</span>;</div>
+<div class="ml-6 mb-2"> <span class="text-pink-500">private String[]</span> passions = {<span class="text-green-400">"Clean Code"</span>, <span class="text-green-400">"System Design"</span>, <span class="text-green-400">"UX"</span>};</div>
+<div class="ml-6 mb-4"></div>
+<div class="ml-6 mb-2"> <span class="text-pink-500">public void</span> <span class="text-secondary">work</span>() {</div>
+<div class="ml-12 mb-2"> <span class="text-pink-500">while</span>(learning) {</div>
+<div class="ml-18 mb-2"> coffee.consume();</div>
+<div class="ml-18 mb-2"> solution.implement();</div>
+<div class="ml-18 mb-2"> bugs.squash();</div>
+<div class="ml-12 mb-2"> }</div>
+<div class="ml-6 mb-2"> }</div>
+<div class="mb-2">}</div>
+</div>
+</div>
+</section>
+
+
+
+<!-- Experience Section -->
+<section id="experience" class="mb-stack-lg">
+
+    <!-- Heading -->
+    <div class="flex items-center justify-between mb-stack-md">
+        <h2 class="inline-flex items-center px-6 py-3 rounded-full
+           bg-[#141b31]
+           border border-cyan-400/20
+           shadow-[0_0_25px_rgba(34,211,238,0.1)]
+           no-underline">
+
+<span class="text-2xl md:text-3xl leading-none"
+     style="
+       font-family: 'Shrikhand', serif;
+       color: #FFD166;
+       text-decoration: none;
+       text-shadow: none;
+     ">
+EXPERIENCE </span>
+
+</h2>
+        
+        
+    </div>
+
+    <div class="grid grid-cols-1 gap-gutter">
+
+        <!-- Experience Card -->
+        <div class="glass-card p-8 rounded-3xl relative overflow-hidden">
+
+            <!-- Glow -->
+            <div class="absolute top-0 right-0 w-40 h-40 bg-primary/10 blur-3xl rounded-full"></div>
+
+            <div class="relative z-10">
+
+                <!-- Top -->
+                <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-4 mb-6">
+
+                    <div>
+                        <h3 class="font-headline-sm text-headline-sm text-on-surface">
+                            Software Development Intern
+                        </h3>
+
+                        <p class="text-primary font-label-mono uppercase tracking-wider mt-1">
+                            TechSonix Solutions
+                        </p>
+                    </div>
+
+                    <div
+                        class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-on-surface-variant font-label-mono text-xs">
+                        MAY 2025 — JUL 2025
+                    </div>
+
+                </div>
+
+                <!-- Description -->
+                <div class="space-y-5">
+
+                    <div class="flex gap-3">
+                        <span class="material-symbols-outlined text-green-400">
+                            check_circle
+                        </span>
+
+                        <p class="text-on-surface-variant">
+                            Developed and optimized modules for a portfolio website platform using
+                            <span class="text-primary font-semibold">React.js</span>,
+                            improving responsiveness and user experience.
+                        </p>
+                    </div>
+
+                    <div class="flex gap-3">
+                        <span class="material-symbols-outlined text-green-400">
+                            check_circle
+                        </span>
+
+                        <p class="text-on-surface-variant">
+                            Integrated REST APIs and reduced page load time by
+                            <span class="text-green-400 font-semibold">30%</span>.
+                        </p>
+                    </div>
+
+                    <div class="flex gap-3">
+                        <span class="material-symbols-outlined text-green-400">
+                            check_circle
+                        </span>
+
+                        <p class="text-on-surface-variant">
+                            Collaborated with backend developers and followed Git-based workflows for
+                            feature development and bug fixes.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- Tech Stack -->
+                <div class="mt-8 flex flex-wrap gap-3">
+
+                    <span class="bg-primary/10 text-primary border border-primary/20 px-3 py-1 rounded-full text-sm">
+                        React.js
+                    </span>
+
+                    <span class="bg-secondary/10 text-secondary border border-secondary/20 px-3 py-1 rounded-full text-sm">
+                        Tailwind CSS
+                    </span>
+
+                    <span class="bg-tertiary/10 text-tertiary border border-tertiary/20 px-3 py-1 rounded-full text-sm">
+                        Node.js
+                    </span>
+
+                    <span class="bg-white/5 text-on-surface-variant border border-white/10 px-3 py-1 rounded-full text-sm">
+                        Express.js
+                    </span>
+
+                    <span class="bg-white/5 text-on-surface-variant border border-white/10 px-3 py-1 rounded-full text-sm">
+                        MongoDB
+                    </span>
+
+                    <span class="bg-white/5 text-on-surface-variant border border-white/10 px-3 py-1 rounded-full text-sm">
+                        Git
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- Projects Section -->
+<section class="mb-stack-lg" id="projects">
+<div class="flex items-center gap-4 mb-stack-md">
+<h2 class="inline-flex items-center px-6 py-3 rounded-full
+           bg-[#141b31]
+           border border-cyan-400/20
+           shadow-[0_0_25px_rgba(34,211,238,0.1)]
+           no-underline">
+
+<span class="text-2xl md:text-3xl leading-none"
+     style="
+       font-family: 'Shrikhand', serif;
+       color: #FFD166;
+       text-decoration: none;
+       text-shadow: none;
+     ">
+PROJECTS </span>
+
+</h2>
+
+
+
+
+</div>
+<!-- Project 1: Ecoloop -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter mb-gutter">
+<div class="glass-card rounded-xl overflow-hidden flex flex-col">
+<div class="h-64 bg-surface-container relative overflow-hidden">
+<img class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700" data-alt="A high-tech digital interface showing sustainable supply chain metrics with glowing green data points and minimalist line charts. The aesthetic is clean, professional, and sophisticated, using a dark navy and forest green palette to evoke sustainability through technology. High-end glassmorphism elements are integrated into the UI design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAm-m-1Mbb7Fv_jrddCMV7HB6_N_r4HZPzmmtlzucf5SRK-UIC5b4VclKTLnce5j9wqAnIkPH5aB-uuc1P_PUSEh6LGVPQXQzM6rBEz5XO5YMNUc5KbqHa7vlR2VOwbBOLMv8c-PodQktIqypyf3th2OImrhbRnoD5z1_bDkj7KcqXUXnrYB6cyusKvDlcrMfTwE90qd_KtoXg1aQ-jw2r3r4jRFuoW_3kMpFoJkNU0D-21nK1h_mhMrjhhkYBL80MkMR9m2Gg65xFO"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+<div class="absolute bottom-4 left-6">
+<span class="px-3 py-1 bg-[#00FF87]/20 text-[#00FF87] border border-[#00FF87]/30 rounded-full font-label-mono text-xs mr-2">Sustainability</span>
+<span class="px-3 py-1 bg-white/10 text-white rounded-full font-label-mono text-xs">ML Pipeline</span>
+</div>
+</div>
+<div class="p-stack-md flex-grow">
+<h3 class="font-headline-sm text-headline-sm mb-2 text-white">Ecoloop: Sustainable Logistics</h3>
+<p class="text-on-surface-variant mb-stack-md">Developed an AI-driven route optimization engine designed to minimize carbon footprints for urban packaging delivery fleets.</p>
+<div class="grid grid-cols-2 gap-4">
+<div class="p-4 rounded-lg bg-[#00FF87]/5 border-t-2 border-[#00FF87]">
+<div class="text-2xl font-bold text-[#00FF87]">17%</div>
+<div class="text-xs font-label-mono text-on-surface-variant">DIST. REDUCTION</div>
+</div>
+<div class="p-4 rounded-lg bg-[#00FF87]/5 border-t-2 border-[#00FF87]">
+<div class="text-2xl font-bold text-[#00FF87]">12.4k</div>
+<div class="text-xs font-label-mono text-on-surface-variant">CO2 SAVED (KG)</div>
+</div>
+</div>
+</div>
+<div class="px-stack-md py-4 border-t border-white/5 flex justify-between">
+<a class="flex items-center gap-2 text-primary font-label-mono hover:underline" href="#">
+                            VIEW CASE STUDY <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-white">code</span>
+</div>
+</div>
+<!-- Project 2: News & Publication Society -->
+<div class="glass-card rounded-xl overflow-hidden flex flex-col">
+<div class="h-64 bg-surface-container relative overflow-hidden">
+<img class="w-full h-full object-cover opacity-80" data-alt="A sleek editorial-style digital news dashboard with bold typography and a vibrant orange accent color. The interface features asymmetric layout blocks and high-contrast headlines against a dark, textured background. Modern glass cards display trending news items with subtle glowing highlights, creating a premium digital publication feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDd8erl5HrpK5yBP4vLNMZDwAWpzTVl08RYsax_Xfxs5ORUmo1Yqn5acm8eIRTS7-ZjF1140_r9ReshL8jKjfWGumivq5MHM4BWNHp0clASnQBTkBx6r8Swbkn_j5Rm2Nds2VMiIrX0LvLSMUTaDLEyuJZc_Jw5hAi2IUI_e2g9xbITArVMKdm7qQ7AOqpIZvwuJUyJIXipB1u6GA3cD3AWYamhXpRViLAtSTnMSIoXfzLCZKDy97NGMe3SXeArSlBxQMDr4_LREWWH"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+<div class="absolute bottom-4 left-6">
+<span class="px-3 py-1 bg-orange-500/20 text-orange-500 border border-orange-500/30 rounded-full font-label-mono text-xs mr-2">Media Tech</span>
+<span class="px-3 py-1 bg-white/10 text-white rounded-full font-label-mono text-xs">Full-stack</span>
+</div>
+</div>
+<div class="p-stack-md flex-grow">
+<h3 class="font-headline-sm text-headline-sm mb-2 text-white">News &amp; Publication Society Portal</h3>
+<p class="text-on-surface-variant mb-stack-md">Redesigned the official institute news hub, handling real-time content delivery for over 10,000 active monthly readers with CMS integration.</p>
+<div class="space-y-3">
+<div class="w-full bg-white/5 rounded-full h-2 overflow-hidden">
+<div class="bg-orange-500 h-full w-[85%] shadow-[0_0_8px_orange]"></div>
+</div>
+<div class="flex justify-between text-xs font-label-mono">
+<span class="text-on-surface-variant">USER RETENTION GROWTH</span>
+<span class="text-orange-500">+85%</span>
+</div>
+</div>
+</div>
+<div class="px-stack-md py-4 border-t border-white/5 flex justify-between">
+<a class="flex items-center gap-2 text-primary font-label-mono hover:underline" href="#">
+                            LIVE PREVIEW <span class="material-symbols-outlined text-sm">open_in_new</span>
+</a>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-white">share</span>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Achievements -->
+<section id="achievements" class="mb-stack-lg">
+
+  <div class="space-y-stack-md">
+    <h2 class="inline-flex items-center px-6 py-3 rounded-full
+           bg-[#141b31]
+           border border-cyan-400/20
+           shadow-[0_0_25px_rgba(34,211,238,0.1)]
+           no-underline">
+
+<span class="text-2xl md:text-3xl leading-none"
+     style="
+       font-family: 'Shrikhand', serif;
+       color: #FFD166;
+       text-decoration: none;
+       text-shadow: none;
+     ">
+ACHIEVEMENTS </span>
+
+</h2>
+
+    <p class="text-on-surface-variant max-w-2xl">
+      Competitive programming, hackathons and leadership experiences that define my engineering journey.
+    </p>
+    
+
+    <!-- Timeline -->
+    <div class="relative border-l border-outline-variant pl-8 space-y-stack-lg mt-10">
+
+     
+
+      <!-- SIH -->
+      <div class="relative">
+        <div class="absolute -left-[41px] top-1 w-5 h-5 rounded-full bg-orange-400 border-4 border-background"></div>
+
+        <h4 class="font-headline-lg text-body-md text-on-surface">
+          SIH Internal Hackathon
+        </h4>
+
+        <p class="text-primary font-label-mono text-label-mono">
+          4th Position • BIT Mesra
+        </p>
+
+        <p class="text-on-surface-variant text-sm mt-2">
+          Secured 4th place among 60+ teams through innovative problem-solving and teamwork.
+        </p>
+      </div>
+
+      <!-- MSME -->
+      <div class="relative">
+        <div class="absolute -left-[41px] top-1 w-5 h-5 rounded-full bg-cyan-400 border-4 border-background"></div>
+
+        <h4 class="font-headline-lg text-body-md text-on-surface">
+          MSME Hackathon 5.0
+        </h4>
+
+        <p class="text-primary font-label-mono text-label-mono">
+          National Finalist
+        </p>
+
+        <p class="text-on-surface-variant text-sm mt-2">
+          Selected among top teams for building industry-focused solutions.
+        </p>
+      </div>
+
+      <!-- GreenHack -->
+      <div class="relative">
+        <div class="absolute -left-[41px] top-1 w-5 h-5 rounded-full bg-teal-400 border-4 border-background"></div>
+
+        <h4 class="font-headline-lg text-body-md text-on-surface">
+          GreenHack Finalist
+        </h4>
+
+        <p class="text-primary font-label-mono text-label-mono">
+          Code for Climate
+        </p>
+
+        <p class="text-on-surface-variant text-sm mt-2">
+          Recognized for building sustainability-driven solutions.
+        </p>
+      </div>
+
+      <!-- CodeClash -->
+      <div class="relative">
+        <div class="absolute -left-[41px] top-1 w-5 h-5 rounded-full bg-yellow-400 border-4 border-background"></div>
+
+        <h4 class="font-headline-lg text-body-md text-on-surface">
+          CodeClash 1.0
+        </h4>
+
+        <p class="text-primary font-label-mono text-label-mono">
+          Top 50 Rank
+        </p>
+
+        <p class="text-on-surface-variant text-sm mt-2">
+          Achieved Top 50 position in a national-level coding competition.
+        </p>
+      </div>
+
+      <!-- Leadership -->
+      <div class="relative">
+        <div class="absolute -left-[41px] top-1 w-5 h-5 rounded-full bg-pink-400 border-4 border-background"></div>
+
+        <h4 class="font-headline-lg text-body-md text-on-surface">
+          Leadership Roles
+        </h4>
+
+        <p class="text-primary font-label-mono text-label-mono">
+          NAPS BIT MESRA
+        </p>
+
+        <p class="text-on-surface-variant text-sm mt-2">
+          President and Web Developer at NAPS ,BIT Mesra.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+<!-- Contact -->
+<section id="contact" class="mb-stack-lg">
+
+  <!-- Heading -->
+  <div class="mb-stack-md">
+    <h2 class="inline-flex items-center px-6 py-3 rounded-full
+           bg-[#141b31]
+           border border-cyan-400/20
+           shadow-[0_0_25px_rgba(34,211,238,0.1)]
+           no-underline">
+
+<span class="text-2xl md:text-3xl leading-none"
+     style="
+       font-family: 'Shrikhand', serif;
+       color: #FFD166;
+       text-decoration: none;
+       text-shadow: none;
+     ">
+GET IN TOUCH </span>
+
+</h2>
+  <div>
+  </div>
+    <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+      Have an opportunity, project idea, or just want to connect? Feel free to reach out. I'm always open to meaningful conversations and collaborations.
+    </p>
+  </div>
+
+  <!-- Contact Card -->
+  <div class="glass-card rounded-3xl p-10 border border-white/10">
+
+    <div class="grid md:grid-cols-2 gap-10">
+
+      <!-- Left -->
+      <div>
+        <h3 class="text-2xl font-semibold text-on-surface mb-4">
+          Let's Build Something Great Together
+        </h3>
+
+        <p class="text-on-surface-variant leading-relaxed mb-8">
+          Whether it's a full-stack project, internship opportunity, hackathon collaboration or simply discussing technology, I'd love to hear from you.
+        </p>
+
+        <div class="space-y-5">
+
+          <div class="flex items-center gap-4">
+            <span class="material-symbols-outlined text-primary">
+              mail
+            </span>
+            <span class="text-on-surface-variant">
+              nidhidevi425@gmail.com
+            </span>
+          </div>
+
+          <div class="flex items-center gap-4">
+            <span class="material-symbols-outlined text-primary">
+              call
+            </span>
+            <span class="text-on-surface-variant">
+              +91 6392639105
+            </span>
+          </div>
+
+          <div class="flex items-center gap-4">
+            <span class="material-symbols-outlined text-primary">
+              location_on
+            </span>
+            <span class="text-on-surface-variant">
+              India
+            </span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Right -->
+      <div class="flex flex-col justify-center">
+
+        <h3 class="text-xl font-semibold text-on-surface mb-4">
+          Available For
+        </h3>
+
+        <div class="flex flex-wrap gap-3">
+
+          <span class="px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary">
+            Internships
+          </span>
+
+          <span class="px-4 py-2 rounded-full bg-secondary/10 border border-secondary/20 text-secondary">
+            Full-Stack Projects
+          </span>
+
+          <span class="px-4 py-2 rounded-full bg-green-400/10 border border-green-400/20 text-green-400">
+            Hackathons
+          </span>
+
+          <span class="px-4 py-2 rounded-full bg-pink-400/10 border border-pink-400/20 text-pink-400">
+            Collaborations
+          </span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+</main>
+<!-- Footer -->
+
+
+
+<footer class="mt-stack-lg border-t border-white/10 bg-black/40 py-5">
+  <div class="text-center">
+    <p class="text-sm text-on-surface-variant">
+      © 2026 <span class="text-primary">Nidhi </span> • Designed & Built with HTML & Tailwind CSS
+    </p>
+  </div>
+</footer>
+
+
+<!-- Interactive script for progress rings if needed -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Optional: Add hover interactivity or dynamic number counting for solved problems
+            const counter = document.querySelector('.font-display-lg');
+            if(counter) {
+                let startValue = 0;
+                const endValue = 500;
+                const duration = 2000;
+                const step = (timestamp) => {
+                    if (!start) var start = timestamp;
+                    const progress = Math.min((timestamp - start) / duration, 1);
+                    counter.innerText = Math.floor(progress * endValue) + "+";
+                    if (progress < 1) {
+                        window.requestAnimationFrame(step);
+                    }
+                };
+                window.requestAnimationFrame(step);
+            }
+        });
+    </script>
+</body></html>
