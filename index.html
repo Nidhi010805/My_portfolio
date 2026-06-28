@@ -5,6 +5,8 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Nidhi Devi | SDE &amp; Full-Stack Developer</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;800&amp;display=swap" rel="stylesheet"/>
@@ -215,9 +217,11 @@
                         Hire Me
                         <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_right_alt</span>
 </button>
-<button class="glass-card px-8 py-4 rounded-xl font-bold text-lg text-on-surface hover:bg-white/10 transition-all">
-                        View Projects
-                    </button>
+<button
+    onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });"
+    class="glass-card px-8 py-4 rounded-xl font-bold text-lg text-on-surface hover:bg-white/10 transition-all">
+    View Projects
+</button>
 </div>
 </div>
 <div class="flex-1 relative">
@@ -262,27 +266,51 @@ ABOUT ME </span>
 
     <!-- Left -->
     <div class="glass-card p-8 rounded-3xl">
-      <div class="flex items-center gap-3 mb-6">
-       
-        
-      </div>
 
-      <p class="text-on-surface-variant leading-8 mb-6">
-        I'm <span class="text-primary font-semibold">Nidhi Devi</span>, a
+  <p class="text-on-surface-variant leading-8 mb-6">
+    I'm <span class="text-primary font-semibold">Nidhi Devi</span>, an
     Electrical and Electronics Engineering undergraduate at
-        <span class="text-tertiary">BIT Mesra</span>. I am passionate about
-        Full-Stack Development, System Design, and Competitive Programming.
-        I enjoy building scalable applications and solving real-world
-        problems through technology.
-      </p>
+    <span class="text-tertiary">BIT Mesra</span>. I'm passionate about
+    Full-Stack Development, Machine Learning, System Design, and Competitive
+    Programming. I enjoy building scalable applications and solving
+    real-world problems through technology.
+  </p>
 
-      <div class="flex items-center gap-3 text-secondary">
-        <span class="material-symbols-outlined">location_on</span>
-        <span class="font-label-mono text-label-mono">
-          India (IST)
-        </span>
-      </div>
-    </div>
+  <!-- Location -->
+  <div class="flex items-center gap-3 text-secondary mb-5">
+    <span class="material-symbols-outlined">location_on</span>
+    <span class="font-label-mono">
+      Kanpur, Uttar Pradesh, India
+    </span>
+  </div>
+
+  <!-- Social Links -->
+  <div class="flex flex-wrap gap-4">
+
+    <a href="https://www.linkedin.com/in/nidhi-devi-a13227314/"
+       target="_blank"
+       class="flex items-center gap-2 px-4 py-2 rounded-xl bg-[#141b31] hover:bg-[#1c2747] transition">
+      <i class="fab fa-linkedin text-blue-400"></i>
+      <span>LinkedIn</span>
+    </a>
+
+    <a href="https://github.com/Nidhi010805"
+       target="_blank"
+       class="flex items-center gap-2 px-4 py-2 rounded-xl bg-[#141b31] hover:bg-[#1c2747] transition">
+      <i class="fab fa-github"></i>
+      <span>GitHub</span>
+    </a>
+
+    <a href="https://leetcode.com/u/Ruhidwivedi/"
+       target="_blank"
+       class="flex items-center gap-2 px-4 py-2 rounded-xl bg-[#141b31] hover:bg-[#1c2747] transition">
+      <span style="color:#FFA116;font-weight:bold;">LC</span>
+      <span>LeetCode</span>
+    </a>
+
+  </div>
+
+</div>
 
     <!-- Right -->
     <div class="glass-card p-8 rounded-3xl">
@@ -576,94 +604,239 @@ EXPERIENCE </span>
 
 </section>
 <!-- Projects Section -->
-<section class="mb-stack-lg" id="projects">
+
+<!-- ===================== PROJECTS ===================== -->
+ <section id="projects">
 <div class="flex items-center gap-4 mb-stack-md">
-<h2 class="inline-flex items-center px-6 py-3 rounded-full
-           bg-[#141b31]
-           border border-cyan-400/20
-           shadow-[0_0_25px_rgba(34,211,238,0.1)]
-           no-underline">
+    <h2 class="inline-flex items-center px-6 py-3 rounded-full
+               bg-[#141b31]
+               border border-cyan-400/20
+               shadow-[0_0_25px_rgba(34,211,238,0.1)]">
 
-<span class="text-2xl md:text-3xl leading-none"
-     style="
-       font-family: 'Shrikhand', serif;
-       color: #FFD166;
-       text-decoration: none;
-       text-shadow: none;
-     ">
-PROJECTS </span>
+        <span class="text-2xl md:text-3xl leading-none"
+            style="font-family:'Shrikhand',serif;color:#FFD166;">
+            PROJECTS
+        </span>
 
-</h2>
-
-
-
-
+    </h2>
 </div>
-<!-- Project 1: Ecoloop -->
+
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter mb-gutter">
-<div class="glass-card rounded-xl overflow-hidden flex flex-col">
-<div class="h-64 bg-surface-container relative overflow-hidden">
-<img class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700" data-alt="A high-tech digital interface showing sustainable supply chain metrics with glowing green data points and minimalist line charts. The aesthetic is clean, professional, and sophisticated, using a dark navy and forest green palette to evoke sustainability through technology. High-end glassmorphism elements are integrated into the UI design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAm-m-1Mbb7Fv_jrddCMV7HB6_N_r4HZPzmmtlzucf5SRK-UIC5b4VclKTLnce5j9wqAnIkPH5aB-uuc1P_PUSEh6LGVPQXQzM6rBEz5XO5YMNUc5KbqHa7vlR2VOwbBOLMv8c-PodQktIqypyf3th2OImrhbRnoD5z1_bDkj7KcqXUXnrYB6cyusKvDlcrMfTwE90qd_KtoXg1aQ-jw2r3r4jRFuoW_3kMpFoJkNU0D-21nK1h_mhMrjhhkYBL80MkMR9m2Gg65xFO"/>
-<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
-<div class="absolute bottom-4 left-6">
-<span class="px-3 py-1 bg-[#00FF87]/20 text-[#00FF87] border border-[#00FF87]/30 rounded-full font-label-mono text-xs mr-2">Sustainability</span>
-<span class="px-3 py-1 bg-white/10 text-white rounded-full font-label-mono text-xs">ML Pipeline</span>
-</div>
-</div>
-<div class="p-stack-md flex-grow">
-<h3 class="font-headline-sm text-headline-sm mb-2 text-white">Ecoloop: Sustainable Logistics</h3>
-<p class="text-on-surface-variant mb-stack-md">Developed an AI-driven route optimization engine designed to minimize carbon footprints for urban packaging delivery fleets.</p>
-<div class="grid grid-cols-2 gap-4">
-<div class="p-4 rounded-lg bg-[#00FF87]/5 border-t-2 border-[#00FF87]">
-<div class="text-2xl font-bold text-[#00FF87]">17%</div>
-<div class="text-xs font-label-mono text-on-surface-variant">DIST. REDUCTION</div>
-</div>
-<div class="p-4 rounded-lg bg-[#00FF87]/5 border-t-2 border-[#00FF87]">
-<div class="text-2xl font-bold text-[#00FF87]">12.4k</div>
-<div class="text-xs font-label-mono text-on-surface-variant">CO2 SAVED (KG)</div>
-</div>
-</div>
-</div>
-<div class="px-stack-md py-4 border-t border-white/5 flex justify-between">
-<a class="flex items-center gap-2 text-primary font-label-mono hover:underline" href="#">
-                            VIEW CASE STUDY <span class="material-symbols-outlined text-sm">arrow_forward</span>
-</a>
-<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-white">code</span>
-</div>
-</div>
-<!-- Project 2: News & Publication Society -->
-<div class="glass-card rounded-xl overflow-hidden flex flex-col">
-<div class="h-64 bg-surface-container relative overflow-hidden">
-<img class="w-full h-full object-cover opacity-80" data-alt="A sleek editorial-style digital news dashboard with bold typography and a vibrant orange accent color. The interface features asymmetric layout blocks and high-contrast headlines against a dark, textured background. Modern glass cards display trending news items with subtle glowing highlights, creating a premium digital publication feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDd8erl5HrpK5yBP4vLNMZDwAWpzTVl08RYsax_Xfxs5ORUmo1Yqn5acm8eIRTS7-ZjF1140_r9ReshL8jKjfWGumivq5MHM4BWNHp0clASnQBTkBx6r8Swbkn_j5Rm2Nds2VMiIrX0LvLSMUTaDLEyuJZc_Jw5hAi2IUI_e2g9xbITArVMKdm7qQ7AOqpIZvwuJUyJIXipB1u6GA3cD3AWYamhXpRViLAtSTnMSIoXfzLCZKDy97NGMe3SXeArSlBxQMDr4_LREWWH"/>
-<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
-<div class="absolute bottom-4 left-6">
-<span class="px-3 py-1 bg-orange-500/20 text-orange-500 border border-orange-500/30 rounded-full font-label-mono text-xs mr-2">Media Tech</span>
-<span class="px-3 py-1 bg-white/10 text-white rounded-full font-label-mono text-xs">Full-stack</span>
-</div>
-</div>
-<div class="p-stack-md flex-grow">
-<h3 class="font-headline-sm text-headline-sm mb-2 text-white">News &amp; Publication Society Portal</h3>
-<p class="text-on-surface-variant mb-stack-md">Redesigned the official institute news hub, handling real-time content delivery for over 10,000 active monthly readers with CMS integration.</p>
-<div class="space-y-3">
-<div class="w-full bg-white/5 rounded-full h-2 overflow-hidden">
-<div class="bg-orange-500 h-full w-[85%] shadow-[0_0_8px_orange]"></div>
-</div>
-<div class="flex justify-between text-xs font-label-mono">
-<span class="text-on-surface-variant">USER RETENTION GROWTH</span>
-<span class="text-orange-500">+85%</span>
-</div>
-</div>
-</div>
-<div class="px-stack-md py-4 border-t border-white/5 flex justify-between">
-<a class="flex items-center gap-2 text-primary font-label-mono hover:underline" href="#">
-                            LIVE PREVIEW <span class="material-symbols-outlined text-sm">open_in_new</span>
-</a>
-<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-white">share</span>
-</div>
-</div>
-</div>
-</section>
 
+    <!-- ===================== PROJECT 1 ===================== -->
+
+    <div class="glass-card rounded-xl p-8 flex flex-col justify-between">
+
+        <div>
+
+            <div class="mb-4">
+                <span class="px-3 py-1 bg-[#00FF87]/20 text-[#00FF87] rounded-full text-xs mr-2">
+                    Full Stack
+                </span>
+
+                <span class="px-3 py-1 bg-white/10 text-white rounded-full text-xs">
+                    Machine Learning
+                </span>
+            </div>
+
+            <h3 class="text-2xl font-bold text-white mb-3">
+                EcoLoop – Sustainable Packaging Platform
+            </h3>
+
+            <p class="text-gray-300 leading-7 mb-6">
+                Built a scalable full-stack logistics platform with AI-powered route optimization,
+                secure authentication, reward tracking, REST APIs, and PostgreSQL database.
+                Optimized SQL queries and deployed the application on Vercel & Render.
+            </p>
+
+            <div class="grid grid-cols-2 gap-4">
+
+                <div class="p-4 rounded-lg bg-[#00FF87]/10 border border-[#00FF87]/20">
+                    <h4 class="text-3xl font-bold text-[#00FF87]">
+                        17%
+                    </h4>
+                    <p class="text-xs text-gray-400 mt-1">
+                        Delivery Distance Reduction
+                    </p>
+                </div>
+
+                <div class="p-4 rounded-lg bg-[#00FF87]/10 border border-[#00FF87]/20">
+                    <h4 class="text-3xl font-bold text-[#00FF87]">
+                        35%
+                    </h4>
+                    <p class="text-xs text-gray-400 mt-1">
+                        Faster API Response
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ===================== PROJECT 2 ===================== -->
+
+    <div class="glass-card rounded-xl p-8 flex flex-col justify-between">
+
+        <div>
+
+            <div class="mb-4">
+                <span class="px-3 py-1 bg-[#00FF87]/20 text-[#00FF87] rounded-full text-xs mr-2">
+                    Full Stack
+                </span>
+
+                <span class="px-3 py-1 bg-white/10 text-white rounded-full text-xs">
+                    CMS Platform
+                </span>
+            </div>
+
+            <h3 class="text-2xl font-bold text-white mb-3">
+                News & Publications Society Website
+            </h3>
+
+            <p class="text-gray-300 leading-7 mb-6">
+                Developed a Content Management System (CMS) for BIT Mesra's News & Publications Society,
+                enabling role-based content publishing, secure authentication, REST APIs,
+                and scalable backend architecture using React, Node.js and PostgreSQL.
+            </p>
+
+            <div class="grid grid-cols-2 gap-4">
+
+                <div class="p-4 rounded-lg bg-[#00FF87]/10 border border-[#00FF87]/20">
+                    <h4 class="text-3xl font-bold text-[#00FF87]">
+                        50+
+                    </h4>
+                    <p class="text-xs text-gray-400 mt-1">
+                        Active Users
+                    </p>
+                </div>
+
+                <div class="p-4 rounded-lg bg-[#00FF87]/10 border border-[#00FF87]/20">
+                    <h4 class="text-3xl font-bold text-[#00FF87]">
+                        40%
+                    </h4>
+                    <p class="text-xs text-gray-400 mt-1">
+                        Faster Content Retrieval
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+   
+
+    <!-- ===================== PROJECT 3 ===================== -->
+
+<div class="glass-card rounded-xl p-8 flex flex-col justify-between">
+
+    <div>
+
+        <div class="mb-4">
+            <span class="px-3 py-1 bg-[#00FF87]/20 text-[#00FF87] rounded-full text-xs mr-2">
+                Machine Learning
+            </span>
+
+            <span class="px-3 py-1 bg-white/10 text-white rounded-full text-xs">
+                Healthcare AI
+            </span>
+        </div>
+
+        <h3 class="text-2xl font-bold text-white mb-3">
+            Heart Disease Risk Prediction System
+        </h3>
+
+        <p class="text-gray-300 leading-7 mb-6">
+            Developed an end-to-end machine learning application to predict heart disease risk using
+            clinical health data. Performed data preprocessing, feature engineering, model evaluation,
+            and deployed an interactive Streamlit application for real-time prediction and risk analysis.
+        </p>
+
+        <div class="grid grid-cols-2 gap-4">
+
+            <div class="p-4 rounded-lg bg-[#00FF87]/10 border border-[#00FF87]/20">
+                <h4 class="text-3xl font-bold text-[#00FF87]">
+                    98.5%
+                </h4>
+                <p class="text-xs text-gray-400 mt-1">
+                    Model Accuracy
+                </p>
+            </div>
+
+            <div class="p-4 rounded-lg bg-[#00FF87]/10 border border-[#00FF87]/20">
+                <h4 class="text-3xl font-bold text-[#00FF87]">
+                    100%
+                </h4>
+                <p class="text-xs text-gray-400 mt-1">
+                    Precision
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ===================== PROJECT 4 ===================== -->
+
+<div class="glass-card rounded-xl p-8 flex flex-col justify-between">
+
+    <div>
+
+        <div class="mb-4">
+            <span class="px-3 py-1 bg-[#00FF87]/20 text-[#00FF87] rounded-full text-xs mr-2">
+                Web Development
+            </span>
+
+            <span class="px-3 py-1 bg-white/10 text-white rounded-full text-xs">
+                Spotify API
+            </span>
+        </div>
+
+        <h3 class="text-2xl font-bold text-white mb-3">
+            Moodify – Mood-Based Playlist Generator
+        </h3>
+
+        <p class="text-gray-300 leading-7 mb-6">
+            Built a responsive web application that generates Spotify playlists based on user mood using the Spotify Web API. Implemented dynamic playlist fetching, dark mode, responsive UI, and optimized REST API integration for a smooth user experience.
+        </p>
+
+        <div class="grid grid-cols-2 gap-4">
+
+            <div class="p-4 rounded-lg bg-[#00FF87]/10 border border-[#00FF87]/20">
+                <h4 class="text-2xl font-bold text-[#00FF87]">
+                    Spotify API
+                </h4>
+                <p class="text-xs text-gray-400 mt-1">
+                    Real-Time Playlists
+                </p>
+            </div>
+
+            <div class="p-4 rounded-lg bg-[#00FF87]/10 border border-[#00FF87]/20">
+                <h4 class="text-2xl font-bold text-[#00FF87]">
+                    100%
+                </h4>
+                <p class="text-xs text-gray-400 mt-1">
+                    Responsive UI
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+<div>
+
+</div>
+ </section>
 <!-- Achievements -->
 <section id="achievements" class="mb-stack-lg">
 
